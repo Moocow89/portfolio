@@ -1,0 +1,127 @@
+
+#content-projects {
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+}
+
+//plain portfolio for smaller screens
+.projects-portfolio {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin:  0 auto;
+
+}
+
+.projects-portfolio-box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 75%;
+  height: auto;
+  margin: 50px auto;
+  border: 3px solid $light-grey;
+  &:hover{
+    box-shadow: 0 0px 8px 5px $light-grey;
+  }
+}
+
+
+
+//slider for larger screens
+.projects-slider {
+  width: auto;
+  position: relative;
+  padding-top: 320px;
+  margin: 50px auto;
+ 
+}
+
+.projects-slider>a>img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 640px;
+  max-height: 325px;
+  transition: all 0.5s;
+  border: 3px solid $light-blue;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+  &:hover{
+    box-shadow: 0 0px 8px 5px $light-blue;
+    cursor: pointer;
+  }
+}
+
+.projects-slider input[name='slide_switch']{
+  display: none;
+}
+
+.projects-slider label {
+  margin: 25px 0 0 18px;
+  border: 3px solid #555;
+ 
+  float: left;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: all 0.5s;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+}
+
+.projects-slider label img {
+  display: block;
+  width: 100px;
+  height: auto;
+}
+
+.projects-slider input[name="slide_switch"]:checked+label {
+  border-color: $light-blue;
+  opacity: 1;
+}
+
+.projects-slider a img {
+  opacity: 0;
+  transform: scale(1.1);
+  pointer-events: none;
+  cursor: default;
+}
+
+.projects-slider input[name="slide_switch"]:checked+label+a>img {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+
+
+
+@media (max-width: 850px) {
+  .projects-portfolio {
+    display: flex;
+  }
+  .projects-slider{
+    display: none;
+  }
+}
+
+@media(min-width: 1300px){
+  .projects-slider{
+   
+  }
+  .projects-slider>a>img {
+    width: 900px;
+    max-height: 579px;
+  }
+  .projects-slider label {
+    margin: 150px 5px 5px 18px;
+  }
+  
+  .projects-slider label img{
+    width: 150px;
+    height: auto;
+  }
+  
+}

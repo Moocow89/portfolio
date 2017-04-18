@@ -1,0 +1,32 @@
+#content-skills{
+  background-color: $dark-blue;
+  flex-direction: column;
+}
+.skills-list-container {
+  display: flex;
+  width: 100%;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  list-style-type: none;
+  width: 100%;
+  margin: 75px auto;
+}
+
+.skill {
+  font-size: 32px;
+  margin: 30px 50px;
+  color: $light-grey;
+}
+
+
+@media (max-width: 475px){
+  .skills-list {
+    flex-direction: column;
+     margin: 0px auto;
+  }
+}

@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: $medium-blue;
+    margin: 0;
+    padding: 0;
+    font-family: $text-font;
+    font-size: 16px;
+}
+
+.content {
+    display: flex;
+    position: relative;
+    color: #FFF;
+    padding: 120px 0px;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.section-header {
+  position: flex;
+  text-align: left;
+  margin-left: 30px;
+  top: -50px;
+  font-family: $header-font;
+  font-size: 36px;
+  font-weight: 300;
+}
